@@ -1,0 +1,13 @@
+Exercício 1007
+
+programa {
+	funcao inicio() {
+	inteiro A,B,C,D,R
+	A = 17
+	B = 14
+	C = 13
+	D = 15
+	R=A*B-C*D
+escreva("Diferença é de ", R,"\n")
+	}
+}
