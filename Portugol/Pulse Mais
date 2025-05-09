@@ -11,3 +11,550 @@ programa {
 escreva("Diferença é de ", R,"\n")
 	}
 }
+
+Exercício  1037
+
+programa {
+  funcao inicio() {
+    real valor
+    escreva("Digite um valor")
+    leia(valor)
+    se(valor >= 0.0 e valor <= 27.0) {
+      escreva("Intervalo [0,27]\n")
+    } senao se(valor > 27.0 e valor <= 52.0) {
+      escreva("Intervalo (27,52]\n")
+    } senao se(valor > 52.0 e valor <= 77.0) {
+      escreva("Intervalo (52,77]\n")
+    } senao se(valor > 77.0 e valor <= 100.0) {
+      escreva("Intervalo (77,100]\n")
+    } senao {
+      escreva("Fora de intervalo\n")
+    }
+  }
+}
+
+Exercício  1038
+
+programa {
+inclua biblioteca Matematica
+
+  funcao inicio() {
+    inteiro codigo, quantidade
+    real precos[] = {4.00, 4.50, 5.00, 2.00, 1.50}
+    real total
+
+    escreva("Digite o código do item: ")
+    leia(codigo)
+    codigo = codigo - 1 // ajusta o índice do vetor
+    escreva("Digite a quantidade: ")
+    leia(quantidade)
+
+    se (codigo >= 0 e codigo < 5) {
+      total = quantidade * precos[codigo]
+      escreva("Total: R$ ", Matematica.arredondar(total, 2), "\n")
+    } senao {
+      escreva("Código inválido\n")
+    }
+  }
+}
+
+Exercício  1073
+
+programa {
+  funcao inicio() {
+    inteiro N, num
+
+    escreva("Digite um valor: ")
+    leia(N)
+
+    num = 2
+    enquanto (num <= N) {
+      escreva(num, "^2 = ", num * num, "\n")
+      num = num + 2
+    }
+  }
+}
+
+Exercício  1114
+
+programa {
+  funcao inicio() {
+    inteiro senha
+    inteiro senha_correta = 2002
+
+    enquanto (verdadeiro) {
+      leia(senha)
+      se (senha == senha_correta) {
+        escreva("Acesso Permitido\n")
+        pare
+      } senao {
+        escreva("Senha Invalida\n")
+      }
+    }
+  }
+}
+
+Exercício  1134
+
+programa {
+  funcao inicio() {
+    inteiro codigo
+    inteiro alcool = 0, gasolina = 0, diesel = 0
+
+    enquanto (verdadeiro) {
+      leia(codigo)
+      se (codigo == 4) {
+        pare
+      } senao se (codigo >= 1 e codigo <= 3) {
+        escolha (codigo) {
+          caso 1:
+            alcool = alcool + 1
+            pare
+          caso 2:
+            gasolina = gasolina + 1
+            pare
+          caso 3:
+            diesel = diesel + 1
+            pare
+        }
+      } senao {
+        // ignora código inválido e solicita novamente
+      }
+    }
+
+    escreva("MUITO OBRIGADO\n")
+    escreva("Alcool: ", alcool, "\n")
+    escreva("Gasolina: ", gasolina, "\n")
+    escreva("Diesel: ", diesel, "\n")
+  }
+}
+
+Python
+
+Exercício  1007
+from time import sleep
+
+A = int(input('Digite um número: '))
+
+B = int(input('Digite outro número: '))
+
+C = int(input('Digite mais um número: '))
+
+D = int(input('Digite mais um número: '))
+
+
+#Multiplicação entre A e B
+
+
+N1 = A * B
+
+print('A multiplicação entre A e B é \033[4;32m {} \033[m'.format(N1), end=' e ')
+
+
+#Multiplicação entre C e D
+
+
+N2 = C * D
+
+print('a multiplicação entre C e D é \033[4;36m {} \033[m'.format(N2), end=' e ')
+
+
+#Diferença entre os valores AB e CD
+
+
+R = N1 - N2
+
+print('a diferença entre AB e CD é \033[4;37m {} \033[m'.format(R))
+
+
+sleep(3)
+
+
+
+Exercício  1008
+
+numero_funcionario = int(input("Digite o número do funcionário: "))
+
+horas_trabalhadas = int(input("Digite o número de horas trabalhadas: "))
+
+valor_por_hora = float(input("Digite o valor por hora: "))
+
+
+salario = horas_trabalhadas * valor_por_hora
+
+
+print('NUMBER = {}'.format(numero_funcionario))
+
+print('SALARY = U$ {:.2f}'.format(salario))
+
+
+
+Exercício  1003
+
+A = int(input('Digite um número: '))
+
+B = int(input('Digite mais um número: '))
+
+
+C = A + B
+
+print('A de A e B é {}'.format(C))
+
+
+
+Exercício  1134
+
+from time import sleep
+
+alcool = 0
+
+gasolina = 0
+
+diesel = 0
+
+
+while True:
+
+    try:
+
+        codigo = int(input('Informe o tipo de combustível abastecido: '))
+
+        if codigo == 4:
+
+            break
+
+        elif codigo == 1:
+
+            alcool += 1
+
+        elif codigo == 2:
+
+            gasolina += 1
+
+        elif codigo == 3:
+
+            diesel += 1
+
+        else:
+
+            print('Código inválido. Por favor, insira um código válido.')
+
+    except ValueError:
+
+        print('Entrada inválida. Por favor, insira um valor inteiro.')
+
+
+print("MUITO OBRIGADO")
+
+print("Alcool: {}".format(alcool))
+
+print("Gasolina: {}".format(gasolina))
+
+print("Diesel: {}".format(diesel))
+
+
+sleep(3)
+
+
+
+Exercício  1073
+
+from time import sleep
+
+N = int(input('Escolher um número: '))
+
+
+for num in range(1, N + 1):
+
+    if num % 2 == 0:
+
+        print('{} ^ 2 = {}'.format(num, num ** 2))
+
+
+sleep(2)
+
+
+
+Exercício  1002
+
+from time import sleep
+
+
+# Define o valor de PI
+
+PI = 3.14159
+
+
+# Lê o valor do raio como um número real
+
+raio = float(input('Informe o raio da circunferência:'))
+
+
+# Calcula a área da circunferência
+
+area = PI * (raio ** 2)
+
+
+# Imprime o resultado com 4 casas decimais
+
+print('A={:.4f}'.format(area))
+
+
+sleep(3)
+
+
+
+Exercício  1114
+
+from time import sleep
+
+senha_correta = 2002
+
+
+while True:
+
+    try:
+
+        senha = int(input('Qual é a senha? '))
+
+        if senha == senha_correta:
+
+            print("Acesso Permitido")
+
+            break
+
+        else:
+
+            print("Senha Invalida")
+
+    except ValueError:
+
+        print("Entrada inválida. Por favor, insira um valor inteiro.")
+
+sleep(2)
+
+
+
+Exercício 1038
+
+from time import sleep
+
+print('\U0001F37D' * 20)
+
+print('Bem vindo ao lanchonete do Marco')
+
+print('\U0001F37D' * 20)
+
+sleep(2)
+
+
+print('Irei te apresentar o cardápio \U0001F4CB')
+
+sleep(2)
+
+print('[1] - Cachorro-Quente \U0001F32D')
+
+print('[2] - X-Salada \U0001F354')
+
+print('[3] - X-Bacon \U0001F354')
+
+print('[4] - Torrada Simples \U0001F35E')
+
+print('[5] - Refrigerante \U0001F964')
+
+sleep(2)
+
+
+print('Qual você escolhe?')
+
+opcao = str(input(' '))
+
+sleep(2)
+
+print('Quantos que você quer?')
+
+quantidade = int(input(' '))
+
+
+if opcao == '1':
+
+    sleep(2)
+
+    valor = quantidade * 4
+
+    print('\U0001F4B8 O valor ficará R${:.2f} \U0001F4B8'.format(valor))
+
+elif opcao == '2':
+
+     sleep(2)
+
+     valor = quantidade * 4.50
+
+     print('\U0001F4B8 O valor ficará R${:.2f} \U0001F4B8'.format(valor))
+
+elif opcao == '3':
+
+     sleep(2)
+
+     valor = quantidade * 5
+
+     print('\U0001F4B8 O valor ficará R${:.2f} \U0001F4B8'.format(valor))
+
+elif opcao == '4':
+
+    sleep(2)
+
+    valor = quantidade * 2
+
+    print('\U0001F4B8 O valor ficará R${:.2f} \U0001F4B8'.format(valor))
+
+elif opcao == '5':
+
+    sleep(2)
+
+    valor = quantidade * 1.50
+
+    print('\U0001F4B8 O valor ficará R${:.2f} \U0001F4B8'.format(valor))
+
+else:
+
+    print('\033[1;31m Essa opção não existe! \033[m')
+
+
+print('Tenha um ótimo dia', end= '')
+
+print('\U0001F601' * 3)
+
+
+Exercício 1017
+
+from time import sleep
+
+print('\U0001F6E3' * 20)
+
+print('Vamos ver quantos Km você percorreu', end=' e ')
+
+print('o quantos litros de combustível você consumiu')
+
+print('\U0001F697' * 20)
+
+
+# Primeiro vamos descobrir a sua velocidade e o tempo que demorou
+
+
+tem = int(input('Digite o tempo que durou na sua viagem (h) \U0000231B'))
+
+vel = float(input('Digite a velocidade que você percorreu (km/h) \U0001F3CE'))
+
+
+# Agora vamos descobrir quanto foi a sua distância
+
+
+dis = tem * vel
+
+print('A sua distância foi de \033[4;35m {} \033[m km'.format(dis))
+
+
+#Agora vamos descobrir quantos litros de combústivel consumiu
+
+
+con = dis / 12
+
+print('Você consumiu \033[4;32m {:.2f} \033[m litros de combústivel'.format(con))
+
+sleep(2)
+
+
+Exercício  1037
+
+from time import sleep
+
+num = float(input('Digite um número '))
+
+
+if 0.0 < num < 27.0:
+
+    print('Intervalo entre 0 até 27')
+
+elif 27.0 < num < 52.0:
+
+    print('Intervalo entre 27 até 52')
+
+elif 52.0 < num < 77.0:
+
+    print('Intervalo entre 52 até 77')
+
+elif 77.0 < num < 100.0:
+
+    print('Intervalo entre 0 até 27')
+
+elif num < 0.0:
+
+    print('Fora de intervalo')
+
+else:
+
+    print('Fora de intervalo')
+
+sleep(2)
+
+
+
+Exercício  1009
+
+from time import sleep
+
+nome_vendedor = input('Digite o nome do vendedor: ')
+
+salario_fixo = float(input('Digite o salário fixo do vendedor: R$ '))
+
+total_vendas = float(input('Digite o total de vendas efetuadas pelo vendedor: R$ '))
+
+
+comissao = total_vendas * 0.15
+
+salario_total = salario_fixo + comissao
+
+
+print('TOTAL = R$ {:.2f}'.format(salario_total))
+
+
+sleep(2)
+
+
+Exercício  1004
+
+P1 = float(input('Digite o valor do seu primeiro produto: R$ '))
+
+P2 = float(input('Digite o valor do seu segundo produto: R$ '))
+
+
+PROD = P1 * P2
+
+
+print('O resultado do PROD será R$ {:.2f}'.format(PROD))
+
+
+Exercício 1005
+
+A = float(input('Digite um número: '))
+
+B = float(input('Digite mais um número: '))
+
+
+pesoA = 3.5
+
+pesoB = 7.5
+
+
+numerador = A * pesoA + B * pesoB
+
+denominador = pesoA + pesoB
+
+
+media = numerador / denominador
+
+
+print('MEDIA = {:.5f}'.format(media))
+
+
